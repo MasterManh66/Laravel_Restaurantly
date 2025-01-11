@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         DB::table('products')->truncate();
         DB::table('categories')->truncate();
         DB::table('customers')->truncate();
-        // truncate products trước tránh khoá ngoại
+        // truncate products trước tránh khoá ngoại, tự động reset ID
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         User::factory(10)->create();

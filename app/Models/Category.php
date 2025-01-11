@@ -13,6 +13,6 @@ class Category extends Model
 
     // 1 cat có n pro
     public function pro() {
-        return $this->hasMany(Product::class, 'category_id', 'id'); 
+        return $this->hasMany(Product::class, 'category_id', 'id'); // model , khoái ngoại của pro và id khoá chính cate
     }
 }
